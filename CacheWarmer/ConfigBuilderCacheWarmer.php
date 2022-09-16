@@ -52,13 +52,13 @@ class ConfigBuilderCacheWarmer implements CacheWarmerInterface
                 continue;
             }
 
-            try {
-                $this->dumpExtension($extension, $generator);
-            } catch (\Exception $e) {
-                if ($this->logger) {
-                    $this->logger->warning('Failed to generate ConfigBuilder for extension {extensionClass}.', ['exception' => $e, 'extensionClass' => \get_class($extension)]);
-                }
-            }
+            #try {
+            #    $this->dumpExtension($extension, $generator);
+            #} catch (\Exception $e) {
+            #    if ($this->logger) {
+            #        $this->logger->warning('Failed to generate ConfigBuilder for extension {extensionClass}.', ['exception' => $e, 'extensionClass' => \get_class($extension)]);
+            #    }
+            #}
         }
 
         // No need to preload anything
